@@ -1,2 +1,2 @@
 # pipex
-you can choose minitalk... (I don't know why I did this project even though I choosed minitalk)
+"I did minitalk, and then I somehow ended up doing this too. No idea why."
