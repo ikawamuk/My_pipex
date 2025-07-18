@@ -6,14 +6,14 @@
 /*   By: ikawamuk <ikawamuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:34:21 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/07/18 20:10:30 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/07/19 04:54:12 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
-#include "config.h"
+# include "config.h"
 
 int	pipex(t_ctx *ctx, char *ep[]);
 

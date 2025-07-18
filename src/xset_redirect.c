@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:02:19 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/07/19 03:22:21 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/07/19 04:53:27 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ static char	*redirect(int i, t_ctx ctx, t_cp *cp)
 	}
 	else if (i == ctx.cmd_num - 1)
 	{
-		
 		safe_close(cp->out);
 		cp->out = open(ctx.outfile, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		if (cp->out == -1)

@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 11:34:26 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/07/19 04:13:49 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/07/19 04:53:02 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*here_doc(int i, t_ctx ctx, t_cp *cp)
 	return (NULL);
 }
 
+// need to increment, change till available, file name
+// shoud be able to get more than 5000 chars input from STDIN.
 static int	here_doc_fd(char *limiter)
 {
 	char	*file_name;
@@ -44,10 +46,10 @@ static int	here_doc_fd(char *limiter)
 	tmp_fd = -1;
 	while (tmp_fd == -1)
 	{
-		file_name = "tmp_file"; // increment
+		file_name = "tmp_file";
 		tmp_fd = open(file_name, O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	}
-	input = get_here_doc_input(limiter); // shoud be able get more than 5000 chars
+	input = get_here_doc_input(limiter);
 	if (!input)
 		return (close(tmp_fd), -1);
 	ft_putstr_fd(input, tmp_fd);

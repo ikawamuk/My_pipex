@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 01:45:01 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/07/19 03:21:01 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/07/19 04:54:00 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	cmd_not_found(t_cp *cp)
 	ft_putstr_fd(": command not found\n", 2);
 	safe_close(cp->in);
 	safe_close(cp->out);
-	cp->env_paths = free_str_arr(cp->env_paths);	
+	cp->env_paths = free_str_arr(cp->env_paths);
 	cp->argv = free_str_arr(cp->argv);
 	exit(CMD_NOT_FOUND);
 }
@@ -55,7 +55,7 @@ static void	permission_denied(t_cp *cp, char *path)
 	ft_putstr_fd(": Permission denied\n", 2);
 	safe_close(cp->in);
 	safe_close(cp->out);
-	cp->env_paths = free_str_arr(cp->env_paths);	
+	cp->env_paths = free_str_arr(cp->env_paths);
 	cp->argv = free_str_arr(cp->argv);
 	free(cp->cmd_path);
 	free(path);
