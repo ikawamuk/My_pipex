@@ -1,6 +1,6 @@
 #!/bin/bash
 exec 2>/dev/null
-
+mkdir test; cp pipex test; cd test;
 # validation test
 test_few_args() {
     local testname="$1"
@@ -194,3 +194,7 @@ touch unreadable_file; chmod 000 unreadable_file
 leak_test leak_test14 unreadable_file cat cat outfile
 touch unwritable_file; chmod 555 unwritable_file
 leak_test leak_test15 infile cat cat unwritable_file
+
+
+echo "-----end-----"
+cd ..
